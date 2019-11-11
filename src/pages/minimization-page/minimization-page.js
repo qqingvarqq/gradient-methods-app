@@ -1,0 +1,15 @@
+import React from 'react';
+import {NavigationHeader} from '../../ui-components/navigation-header';
+import {IconButton} from '../../ui-components/button';
+import './minimization-page.css';
+
+export default function MinimizationPage(props) {
+  const {chosedFunctionIndex, onBackToMainPsge = () => null, ...rest} = props;
+  return (
+    <div className="minimization-page" {...rest}>
+      <NavigationHeader>
+        <IconButton type="arrowLeft" onClick={onBackToMainPsge}></IconButton>
+      </NavigationHeader>
+    </div>
+  );
+}
