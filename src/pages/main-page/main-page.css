@@ -1,0 +1,15 @@
+.main-page {
+  display: grid;
+  grid-template-rows: min-content min-content;
+  grid-gap: 48px;
+}
+.main-page > .header {
+  color: rgb(60, 194, 62);
+  font-size: 104px;
+  font-weight: 400;
+}
+.main-page > .options-container {
+  display: grid;
+  grid-template-rows: min-content min-content;
+  grid-template-columns: min-content min-content;
+}
