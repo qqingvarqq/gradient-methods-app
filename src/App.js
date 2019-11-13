@@ -3,7 +3,10 @@ import {MainPage} from './pages/main-page';
 import {MinimizationPage} from './pages/minimization-page';
 import './app.css';
 import {powellFunction} from './minimization-algorithms/functions';
-import {oneStepDifferenceGradientMethod} from './minimization-algorithms/optimization';
+import {
+  oneStepDifferenceGradientMethod,
+  twoStepDifferenceGradientMethod,
+} from './minimization-algorithms/optimization';
 const metadata = [
   {name: 'penalty-function-1', description: 'Penalty Function 1'},
   {name: 'penalty-function-2', description: 'Penalty Function 2'},
@@ -15,14 +18,20 @@ const metadata = [
 }*/
 function testOptimization() {
   const epsilon = 0.00001;
-  const startVal = new Array(40).fill(2);
+  const startVal = new Array(32).fill(20);
   console.log(startVal, powellFunction(startVal));
-  const optimizedVal = oneStepDifferenceGradientMethod(
+  const optimizedVal1 = oneStepDifferenceGradientMethod(
     powellFunction,
     startVal,
     epsilon
   );
-  console.log(optimizedVal, Math.round(powellFunction(optimizedVal)));
+  console.log(optimizedVal1, Math.round(powellFunction(optimizedVal1)));
+  const optimizedVal2 = twoStepDifferenceGradientMethod(
+    powellFunction,
+    startVal,
+    epsilon
+  );
+  console.log(optimizedVal2, Math.round(powellFunction(optimizedVal2)));
 }
 export default function App() {
   const [chosedFunctionIndex, setChosedFunctionIndex] = React.useState(null);
