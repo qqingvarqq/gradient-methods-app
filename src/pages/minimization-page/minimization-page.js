@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavigationHeader} from '../../ui-components/navigation-header';
 import {IconButton} from '../../ui-components/button';
+import {DetailedFunctionDescription} from './components/detailed-function-description';
 import './minimization-page.css';
 
 export default function MinimizationPage(props) {
@@ -10,6 +11,7 @@ export default function MinimizationPage(props) {
       <NavigationHeader>
         <IconButton type="arrowLeft" onClick={onBackToMainPsge}></IconButton>
       </NavigationHeader>
+      <DetailedFunctionDescription id="powell-function"></DetailedFunctionDescription>
     </div>
   );
 }

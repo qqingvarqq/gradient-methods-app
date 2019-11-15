@@ -21,7 +21,7 @@
 .function-description > .divider {
   margin: 16px 0px 16px 0px;
   width: 100%;
-  height: 1px;
+  min-height: 1px;
   background-color: rgba(0, 0, 0, 0.3);
 }
 .function-description > img.function {
