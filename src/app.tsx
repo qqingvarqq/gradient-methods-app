@@ -13,9 +13,6 @@ const metadata = [
   {name: 'rosenbrock-function', description: 'Rosenbrock Function'},
   {name: 'powell-function', description: 'Powell Function'},
 ];
-/*function myFn(arr) {
-  return (arr[0] - 1) * (arr[0] - 1) + (arr[1] - 1) * (arr[1] - 1) + 5;
-}*/
 function testOptimization() {
   const epsilon = 0.00001;
   const startVal = new Array(700).fill(1);
@@ -34,9 +31,12 @@ function testOptimization() {
   console.log(optimizedVal2, Math.round(penaltyFunction1(optimizedVal2)));
 }
 export default function App() {
-  const [chosedFunctionIndex, setChosedFunctionIndex] = React.useState(null);
+  const [
+    chosedFunctionIndex,
+    setChosedFunctionIndex,
+  ] = React.useState<Number | null>(null);
   const clickBackButton = () => setChosedFunctionIndex(null);
-  const clickFunctionOption = index => setChosedFunctionIndex(index);
+  const clickFunctionOption = (index: Number) => setChosedFunctionIndex(index);
   React.useEffect(() => testOptimization(), []);
   const getPage = () => {
     switch (chosedFunctionIndex) {
