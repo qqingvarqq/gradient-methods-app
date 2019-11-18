@@ -1,7 +1,7 @@
 import React from 'react';
 import {MainPage} from './pages/main-page';
 import {MinimizationPage} from './pages/minimization-page';
-import './app.css';
+import styles from './app.module.css';
 import {penaltyFunction1} from './minimization-algorithms/functions';
 import {
   oneStepDifferenceGradientMethod,
@@ -15,7 +15,7 @@ const metadata = [
 ];
 function testOptimization() {
   const epsilon = 0.00001;
-  const startVal = new Array(700).fill(1);
+  const startVal = new Array(70).fill(1);
   console.log(startVal, penaltyFunction1(startVal));
   const optimizedVal1 = oneStepDifferenceGradientMethod(
     penaltyFunction1,
@@ -57,8 +57,8 @@ export default function App() {
     }
   };
   return (
-    <div className="app">
-      <div className="app-container">{getPage()}</div>
+    <div className={styles.app}>
+      <div className={styles.app_container}>{getPage()}</div>
     </div>
   );
 }
