@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavigationHeader} from '../../ui-components/navigation-header';
+import {NavigationHeader} from '../../ui-components';
 import {IconButton} from '../../ui-components/button';
 import {DetailedFunctionDescription} from './components/detailed-function-description';
 import './minimization-page.css';
