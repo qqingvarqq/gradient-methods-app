@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card} from '../../../../ui-components/card';
+import {Card} from '../../../../ui-components';
 import {SubmitButton} from '../../../../ui-components/button';
 import {getImage} from '../../../page-utils';
 import './detailed-function-description.css';
