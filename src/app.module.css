@@ -1,11 +1,11 @@
-.app {
+.root {
   height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.app_container {
+.container {
   height: 100%;
   width: 100%;
   max-width: 904px;

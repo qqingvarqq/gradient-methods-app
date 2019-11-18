@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {MainPage} from './pages/main-page';
 import {MinimizationPage} from './pages/minimization-page';
 import styles from './app.module.css';
@@ -30,7 +30,7 @@ function testOptimization() {
   );
   console.log(optimizedVal2, Math.round(penaltyFunction1(optimizedVal2)));
 }
-export default function App() {
+export const App: React.FC = () => {
   const [
     chosedFunctionIndex,
     setChosedFunctionIndex,
@@ -57,8 +57,8 @@ export default function App() {
     }
   };
   return (
-    <div className={styles.app}>
-      <div className={styles.app_container}>{getPage()}</div>
+    <div className={styles.root}>
+      <div className={styles.container}>{getPage()}</div>
     </div>
   );
-}
+};
