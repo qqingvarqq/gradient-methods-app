@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {useRouter, Pages} from './router.hook';
 import {MainPage} from './pages/main-page';
 import {MinimizationPage} from './pages/minimization-page';
 import styles from './app.module.css';
@@ -31,27 +32,25 @@ function testOptimization() {
   console.log(optimizedVal2, Math.round(penaltyFunction1(optimizedVal2)));
 }
 export const App: React.FC = () => {
-  const [
-    chosedFunctionIndex,
-    setChosedFunctionIndex,
-  ] = React.useState<Number | null>(null);
-  const clickBackButton = () => setChosedFunctionIndex(null);
-  const clickFunctionOption = (index: Number) => setChosedFunctionIndex(index);
+  const [route, setRoute] = useRouter();
+  const goToMainPage = () => setRoute({page: Pages.MAIN, params: {}});
+  const goToMinimizationPage = (functionId: Number) =>
+    setRoute({page: Pages.MINIMIZATION, params: {functionId}});
   React.useEffect(() => testOptimization(), []);
   const getPage = () => {
-    switch (chosedFunctionIndex) {
-      case null:
+    switch (route.page) {
+      case Pages.MAIN:
         return (
           <MainPage
-            onClickFunctionOption={clickFunctionOption}
+            onClickFunctionOption={goToMinimizationPage}
             metadata={metadata}
           />
         );
-      default:
+      case Pages.MINIMIZATION:
         return (
           <MinimizationPage
-            chosedFunctionIndex={chosedFunctionIndex}
-            onBackToMainPsge={clickBackButton}
+            chosedFunctionIndex={route.params.functionId}
+            onBackToMainPsge={goToMainPage}
           />
         );
     }
