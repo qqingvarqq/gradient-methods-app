@@ -1,19 +1,19 @@
 import * as React from 'react';
 import {useRouter, Pages} from './router.hook';
-import {MainPage} from './pages/main-page';
+import {MainPage} from './pages';
 import {MinimizationPage} from './pages/minimization-page';
 import styles from './app.module.css';
 import {FunctionsToOptimize} from './functions';
 /*import {
   oneStepDifferenceGradientMethod,
   twoStepDifferenceGradientMethod,
-} from './minimization-algorithms/optimization';*/
+} from './minimization-algorithms/optimization';
 const metadata = [
   {name: 'penalty-function-1', description: 'Penalty Function 1'},
   {name: 'penalty-function-2', description: 'Penalty Function 2'},
   {name: 'rosenbrock-function', description: 'Rosenbrock Function'},
   {name: 'powell-function', description: 'Powell Function'},
-];
+];*/
 /*
 function testOptimization() {
   const epsilon = 0.00001;
@@ -44,7 +44,7 @@ export const App: React.FC = () => {
         return (
           <MainPage
             onClickFunctionOption={goToMinimizationPage}
-            metadata={metadata}
+            functionsToOptimize={FunctionsToOptimize}
           />
         );
       case Pages.MINIMIZATION:

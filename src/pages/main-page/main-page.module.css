@@ -1,0 +1,23 @@
+.root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.container {
+  display: grid;
+  grid-template-rows: auto auto;
+  width: 100%;
+  grid-gap: 48px;
+  margin-top: calc(25vh - 100px);
+}
+.header {
+  color: rgb(60, 194, 62);
+  font-size: 100px;
+  font-weight: 400;
+}
+.options_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+}
