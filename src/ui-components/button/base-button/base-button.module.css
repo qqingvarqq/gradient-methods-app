@@ -9,6 +9,6 @@
   padding: 0;
   background: none;
 }
-.root:focus{
+.root:focus {
   outline: none;
 }
