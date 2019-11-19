@@ -1,8 +1,14 @@
-.base-button {
+.root {
   height: auto;
   width: auto;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
+  padding: 0;
+  background: none;
+}
+.root:focus{
+  outline: none;
 }
