@@ -1,0 +1,43 @@
+.root {
+  width: 100%;
+  height: auto;
+  font-size: 24px;
+}
+.about {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: min-content min-content min-content;
+  grid-row-gap: 20px;
+}
+
+.about_header {
+  font-size: 64px;
+  color: rgb(60, 194, 62);
+}
+.about_function {
+  max-width: 632px;
+  width: 100%;
+}
+.about_minimum {
+  display: grid;
+  grid-template-rows: max-content max-content;
+  grid-row-gap: 16px;
+}
+.gap {
+  margin: 20px 0px 20px 0px;
+  background-color: rgba(0, 0, 0, 0.3);
+  min-height: 1px;
+  width: 100%;
+}
+.input_form {
+  height: auto;
+  width: 100%;
+  display: grid;
+  grid-row-gap: 16px;
+}
+.optimize {
+  display: flex;
+  justify-content: flex-end;
+}

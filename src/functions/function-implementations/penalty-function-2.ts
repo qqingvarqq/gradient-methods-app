@@ -22,7 +22,7 @@ export const PenaltyFunction2: FunctionMetadata = {
   srcUrl: PenaltyFunction2Src,
   id: 'PenaltyFunction2',
   name: 'Penalty function 2',
-  xMin: 'point depends from dimension of the input',
-  outputMin: 'output depends from dimension of the input',
+  xMin: '(point depends from dimension of the input)',
+  outputMin: '(output depends from dimension of the input)',
   functionToCall: penaltyFunction2,
 };
