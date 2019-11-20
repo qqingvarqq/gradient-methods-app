@@ -6,6 +6,7 @@ import {
 } from '../../ui-components';
 import {FunctionMetadata} from '../../functions';
 import {FunctionInfo} from './components/function-info/function-info';
+import {OptimizationResult} from './components/optimization-result/optimization-result';
 import styles from './minimization-page.module.css';
 
 export const MinimizationPage: React.FC<{
@@ -15,12 +16,15 @@ export const MinimizationPage: React.FC<{
   const {functionToOptimize, onClickGoBackMainPage} = props;
   return (
     <div className={styles.root}>
-      <NavigationHeader>
-        <IconButton
-          iconType={IconButtonTypes.ARROWLEFT}
-          onClick={onClickGoBackMainPage}></IconButton>
-      </NavigationHeader>
-      <FunctionInfo functionToOptimize={functionToOptimize}></FunctionInfo>
+      <div className={styles.container}>
+        <NavigationHeader>
+          <IconButton
+            iconType={IconButtonTypes.ARROWLEFT}
+            onClick={onClickGoBackMainPage}></IconButton>
+        </NavigationHeader>
+        <FunctionInfo functionToOptimize={functionToOptimize}></FunctionInfo>
+        <OptimizationResult></OptimizationResult>
+      </div>
     </div>
   );
 };

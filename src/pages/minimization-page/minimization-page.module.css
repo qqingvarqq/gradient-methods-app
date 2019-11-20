@@ -1,8 +1,13 @@
 .root {
+  height: auto;
+  width: 100%;
+  display: flex;
+  margin-bottom: 64px;
+}
+.container {
   height: 100%;
   width: 100%;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: min-content min-content;
   grid-row-gap: 32px;
 }

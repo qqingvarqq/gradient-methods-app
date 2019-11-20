@@ -11,6 +11,7 @@
   width: 100%;
   grid-gap: 48px;
   margin-top: calc(25vh - 100px);
+  margin-bottom: 64px;
 }
 .header {
   color: rgb(60, 194, 62);
