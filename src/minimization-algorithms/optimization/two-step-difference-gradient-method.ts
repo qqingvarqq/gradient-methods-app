@@ -3,16 +3,21 @@ import {
   getLenOfTheStepAndNextVector,
   findEuclidNorm,
   addVectors,
-} from './utils.js';
-let count = 1;
-export default function twoStepDifferenceGradientMethod(func, x, epsilon) {
+} from './utils';
+import {OptimizationAlgoMetadata} from '../run-optimization';
+function twoStepDifferenceGradientMethod(
+  func: Function,
+  x: number[],
+  epsilon: number
+): [number[], number] {
+  let countOfSteps = 0;
   let vectorX = x;
   let alpha = 0.01;
   let beta = 0.01;
   let h1 = 0.0001;
   let h2 = 0.0001;
   while (true) {
-    count++;
+    countOfSteps++;
     const fnOutputForVectorX = func(vectorX);
     const derivativeValuesU = dividedDifferences(
       func,
@@ -29,7 +34,11 @@ export default function twoStepDifferenceGradientMethod(func, x, epsilon) {
     );
     alpha = valuesU[0];
     const vectorU = valuesU[1];
-    const step2VectorX = addVectors((x, y) => (x + y) / 2, vectorU, vectorX);
+    const step2VectorX = addVectors(
+      (x: number, y: number) => (x + y) / 2,
+      vectorU,
+      vectorX
+    );
     const step2FnOutputForVectorX = func(step2VectorX);
     const derivativeValuesStep2 = dividedDifferences(
       func,
@@ -54,6 +63,10 @@ export default function twoStepDifferenceGradientMethod(func, x, epsilon) {
       break;
     }
   }
-  console.log('TWO: ', count);
-  return vectorX;
+  return [vectorX, countOfSteps];
 }
+
+export const TwoStepDifferenceGradientMethod: OptimizationAlgoMetadata = {
+  name: 'Two-step method based on a difference-gradient method',
+  method: twoStepDifferenceGradientMethod,
+};

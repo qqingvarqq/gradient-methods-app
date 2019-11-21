@@ -1,15 +1,45 @@
 import * as React from 'react';
-import {Card, SubmitButton} from '../../../../ui-components';
+import {Card, SubmitButton, Input} from '../../../../ui-components';
 import {FunctionMetadata} from '../../../../functions';
 import styles from './function-info.module.css';
 
 export const FunctionInfo: React.FC<{
   functionToOptimize: FunctionMetadata;
+  setOptimizationParams: Function;
 }> = props => {
-  const {functionToOptimize} = props;
+  const {functionToOptimize, setOptimizationParams} = props;
+  const [epsilonInput, setEpsilonInput] = React.useState<string>('0.0001');
+  const [epsilonInputError, setEpsilonInputError] = React.useState<boolean>(
+    false
+  );
+  const [vectorXInput, setVectorXInput] = React.useState<string>(
+    `2,2,2,2,2,2,2,2`
+  );
+  const [vectorXInputError, setVectorXInputError] = React.useState<boolean>(
+    false
+  );
+  const optimize = () => {
+    let isValid = true;
+    const epsilon = parseFloat(epsilonInput);
+    if (isNaN(epsilon) || epsilon <= 0) {
+      isValid = false;
+      setEpsilonInputError(true);
+    }
+    const vectorX = vectorXInput.split(',').map(parseFloat);
+    if (
+      vectorX.find(val => isNaN(val)) === undefined &&
+      !functionToOptimize.isValidParams(vectorX)
+    ) {
+      isValid = false;
+      setVectorXInputError(true);
+    }
+    if (isValid) {
+      setOptimizationParams({epsilon, vectorX});
+    }
+  };
   return (
     <Card>
-      <div className={styles.root}>
+      <sub className={styles.root}>
         <div className={styles.about}>
           <div className={styles.about_header}>{functionToOptimize.name}</div>
           <img
@@ -27,16 +57,34 @@ export const FunctionInfo: React.FC<{
           </div>
         </div>
         <div className={styles.gap} />
-        <div className={styles.input_form}>
+        <sub className={styles.input_form}>
           <div className={styles.vector_x}>
-            x<sub>0</sub> = [10,10,10,10,...]
+            <div>
+              x<sub>0</sub> =
+            </div>
+            <Input
+              type="text"
+              onBlur={() => setVectorXInputError(false)}
+              error={vectorXInputError}
+              value={vectorXInput}
+              onChange={e => setVectorXInput(e.target.value)}
+              placeholder="Enter initial vector X"></Input>
           </div>
-          <div className={styles.epsilon}>e = 0.000001</div>
+          <div className={styles.epsilon}>
+            <div>e =</div>
+            <Input
+              type="number"
+              onBlur={() => setEpsilonInputError(false)}
+              error={epsilonInputError}
+              value={epsilonInput}
+              onChange={e => setEpsilonInput(e.target.value)}
+              placeholder="Enter epsilon"></Input>
+          </div>
           <div className={styles.optimize}>
-            <SubmitButton>Optimize</SubmitButton>
+            <SubmitButton onClick={optimize}>Optimize</SubmitButton>
           </div>
-        </div>
-      </div>
+        </sub>
+      </sub>
     </Card>
   );
 };

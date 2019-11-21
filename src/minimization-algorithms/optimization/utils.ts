@@ -1,4 +1,9 @@
-export function dividedDifferences(func, vectorX, fnOutputForVectorX, h) {
+export function dividedDifferences(
+  func: Function,
+  vectorX: number[],
+  fnOutputForVectorX: number,
+  h: number
+): number[] {
   const res = new Array(vectorX.length);
   for (let i = 0; i < vectorX.length; i++) {
     const newVectorX = [...vectorX];
@@ -7,21 +12,23 @@ export function dividedDifferences(func, vectorX, fnOutputForVectorX, h) {
   }
   return res;
 }
-export function findEuclidNorm(vals) {
-  let norm = 0;
-  for (let i = 0; i < vals.length; i++) {
-    norm += Math.pow(vals[i], 2);
+
+export function findEuclidNorm(vector: number[]): number {
+  let norma = 0;
+  for (let i = 0; i < vector.length; i++) {
+    norma += Math.pow(vector[i], 2);
   }
-  norm = Math.sqrt(norm);
-  return norm;
+  norma = Math.sqrt(norma);
+  return norma;
 }
+
 export function getLenOfTheStepAndNextVector(
-  func,
-  vectorX,
-  fnOutputForVectorX,
-  prevLenOfTheStep,
-  derivativeValues
-) {
+  func: Function,
+  vectorX: number[],
+  fnOutputForVectorX: number,
+  prevLenOfTheStep: number,
+  derivativeValues: number[]
+): [number, number[], number] {
   let nextVectorX = calculateNextValue(
     vectorX,
     prevLenOfTheStep,
@@ -44,14 +51,23 @@ export function getLenOfTheStepAndNextVector(
   return [prevLenOfTheStep, nextVectorX, fnOutputForNextVectorX];
 }
 
-function calculateNextValue(vectorX, alpha, diff) {
+function calculateNextValue(
+  vectorX: number[],
+  alpha: number,
+  diff: number[]
+): number[] {
   const res = new Array(vectorX.length);
   for (let i = 0; i < vectorX.length; i++) {
     res[i] = vectorX[i] - alpha * diff[i];
   }
   return res;
 }
-export function addVectors(sumFn, vectorX, vectorY) {
+
+export function addVectors(
+  sumFn: Function,
+  vectorX: number[],
+  vectorY: number[]
+): number[] {
   if (vectorX.length !== vectorY.length) {
     throw new Error('vectors length mismatch');
   }

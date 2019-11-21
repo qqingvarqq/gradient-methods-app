@@ -5,4 +5,5 @@ export interface FunctionMetadata {
   xMin: string;
   outputMin: string;
   functionToCall: Function;
+  isValidParams: Function;
 }

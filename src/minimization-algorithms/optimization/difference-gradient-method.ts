@@ -2,14 +2,19 @@ import {
   dividedDifferences,
   findEuclidNorm,
   getLenOfTheStepAndNextVector,
-} from './utils.js';
-let count = 1;
-export default function oneStepDifferenceGradientMethod(func, x, epsilon) {
+} from './utils';
+import {OptimizationAlgoMetadata} from '../run-optimization';
+function differenceGradientMethod(
+  func: Function,
+  x: number[],
+  epsilon: number
+): [number[], number] {
+  let countOfSteps = 0;
   let vectorX = x;
   let alpha = 0.01;
   let h = 0.0001;
   while (true) {
-    count++;
+    countOfSteps++;
     const fnOutputForVectorX = func(vectorX);
     const derivativeValues = dividedDifferences(
       func,
@@ -33,6 +38,10 @@ export default function oneStepDifferenceGradientMethod(func, x, epsilon) {
       break;
     }
   }
-  console.log('ONE: ', count);
-  return vectorX;
+  return [vectorX, countOfSteps];
 }
+
+export const DifferenceGradientMethod: OptimizationAlgoMetadata = {
+  name: 'difference-gradient method',
+  method: differenceGradientMethod,
+};

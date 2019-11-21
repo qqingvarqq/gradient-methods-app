@@ -1,8 +1,10 @@
 import PowellFunctionSrc from './assets/powell-function.svg';
 import {FunctionMetadata} from '../function';
-
+function validatePowellFunctionParams(x: number[]) {
+  return x.length >= 4 && x.length % 4 === 0;
+}
 function powellFunction(x: number[]): number {
-  if (x.length < 4 || x.length % 4 !== 0) {
+  if (!validatePowellFunctionParams(x)) {
     throw new Error(
       `x :${x} should be array with length at least 4 length can be divided by 4 without remainder`
     );
@@ -25,4 +27,5 @@ export const PowellFunction: FunctionMetadata = {
   xMin: '[0, 0, 0, 0, ...]',
   outputMin: '0',
   functionToCall: powellFunction,
+  isValidParams: validatePowellFunctionParams,
 };

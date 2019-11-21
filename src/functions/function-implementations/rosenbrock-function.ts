@@ -1,8 +1,12 @@
 import RosenbrockFunctionSrc from './assets/rosenbrock-function.svg';
 import {FunctionMetadata} from '../function';
 
+function validateRosenbrockFunctionParams(x: number[]) {
+  return x.length >= 2 && x.length % 2 === 0;
+}
+
 function rosenbrockFunction(x: number[]): number {
-  if (x.length < 2 || x.length % 2 !== 0) {
+  if (!validateRosenbrockFunctionParams(x)) {
     throw new Error(
       `x :${x} should be array with length at least 2 and length can be divided by 2 without remainder`
     );
@@ -23,4 +27,5 @@ export const RosenbrockFunction: FunctionMetadata = {
   xMin: '[1, 1, 1, 1, 1, 1, ...]',
   outputMin: '0',
   functionToCall: rosenbrockFunction,
+  isValidParams: validateRosenbrockFunctionParams,
 };
