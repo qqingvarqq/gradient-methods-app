@@ -5,9 +5,9 @@ import {PowellFunction} from './function-implementations/powell-function';
 import {FunctionMetadata} from './function';
 export * from './function';
 
-export const FunctionsToOptimize: FunctionMetadata[] = [
-  PenaltyFunction1,
-  PenaltyFunction2,
-  RosenbrockFunction,
-  PowellFunction,
-];
+export const functionsToOptimize: Map<string, FunctionMetadata> = new Map([
+  [PenaltyFunction1.id, PenaltyFunction1],
+  [PenaltyFunction2.id, PenaltyFunction2],
+  [RosenbrockFunction.id, RosenbrockFunction],
+  [PowellFunction.id, PowellFunction],
+]);

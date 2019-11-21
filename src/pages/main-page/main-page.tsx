@@ -5,7 +5,7 @@ import styles from './main-page.module.css';
 
 export const MainPage: React.FC<{
   functionsToOptimize: FunctionMetadata[];
-  onClickFunctionOption: (index: number) => void;
+  onClickFunctionOption: (index: string) => void;
 }> = props => {
   const {functionsToOptimize, onClickFunctionOption} = props;
   return (
@@ -16,11 +16,11 @@ export const MainPage: React.FC<{
         </div>
         <div className={styles.options_container}>
           {functionsToOptimize.map(
-            (functionMetadata: FunctionMetadata, index: number) => (
+            (functionMetadata: FunctionMetadata) => (
               <FunctionShortInfo
-                key={index}
+                key={functionMetadata.id}
                 functionMetadata={functionMetadata}
-                onClick={() => onClickFunctionOption(index)}
+                onClick={() => onClickFunctionOption(functionMetadata.id)}
               />
             )
           )}

@@ -25,7 +25,7 @@ class Router {
         url = `/${page}`;
         break;
       case Pages.MINIMIZATION:
-        if (params.functionId === undefined) {
+        if (params.functionId === undefined || params.functionId.length === 0) {
           break;
         }
         url = `/${page}/${params.functionId}`;
@@ -44,11 +44,11 @@ class Router {
         route = {page, params: {}};
         break;
       case Pages.MINIMIZATION:
-        if (params.length === 1 && !isNaN(parseInt(params[0]))) {
+        if (params.length === 1) {
           route = {
             page,
             params: {
-              functionId: parseInt(params[0]),
+              functionId: params[0],
             },
           };
         } else {

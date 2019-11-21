@@ -2,12 +2,12 @@ import * as React from 'react';
 import {useRouter, Pages} from './router.hook';
 import {MainPage, MinimizationPage} from './pages';
 import styles from './app.module.css';
-import {FunctionsToOptimize} from './functions';
+import {functionsToOptimize} from './functions';
 
 export const App: React.FC = () => {
   const [route, setRoute] = useRouter();
   const goToMainPage = () => setRoute({page: Pages.MAIN, params: {}});
-  const goToMinimizationPage = (functionId: Number) =>
+  const goToMinimizationPage = (functionId: string) =>
     setRoute({page: Pages.MINIMIZATION, params: {functionId}});
   const getPage = () => {
     switch (route.page) {
@@ -15,17 +15,18 @@ export const App: React.FC = () => {
         return (
           <MainPage
             onClickFunctionOption={goToMinimizationPage}
-            functionsToOptimize={FunctionsToOptimize}
+            functionsToOptimize={Array.from(functionsToOptimize.values())}
           />
         );
       case Pages.MINIMIZATION:
-        if (route.params.functionId >= FunctionsToOptimize.length) {
+        if (!functionsToOptimize.has(route.params.functionId)) {
           goToMainPage();
           return null;
         }
         return (
           <MinimizationPage
-            functionToOptimize={FunctionsToOptimize[route.params.functionId]}
+            //@ts-ignore functionsToOptimize.get can't return undefined
+            functionToOptimize={functionsToOptimize.get(route.params.functionId)}
             onClickGoBackMainPage={goToMainPage}
           />
         );

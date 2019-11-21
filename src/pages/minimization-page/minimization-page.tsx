@@ -5,11 +5,6 @@ import {
   IconButtonTypes,
 } from '../../ui-components';
 import {FunctionMetadata} from '../../functions';
-import {
-  runOptimization,
-  DifferenceGradientMethod,
-  TwoStepDifferenceGradientMethod,
-} from '../../minimization-algorithms';
 import {FunctionInfo} from './components/function-info/function-info';
 import {OptimizationResult} from './components/optimization-result/optimization-result';
 import styles from './minimization-page.module.css';
