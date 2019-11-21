@@ -1,4 +1,5 @@
 export interface OptimizationAlgoMetadata {
+  id: string;
   name: string;
   method: Function;
 }

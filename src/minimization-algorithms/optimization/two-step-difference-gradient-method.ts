@@ -67,6 +67,7 @@ function twoStepDifferenceGradientMethod(
 }
 
 export const TwoStepDifferenceGradientMethod: OptimizationAlgoMetadata = {
+  id: 'twoStepDifferenceGradientMethod',
   name: 'Two-step method based on a difference-gradient method',
   method: twoStepDifferenceGradientMethod,
 };

@@ -21,7 +21,7 @@ function penaltyFunction2(x: number[]): number {
 
 export const PenaltyFunction2: FunctionMetadata = {
   srcUrl: PenaltyFunction2Src,
-  id: 'PenaltyFunction2',
+  id: 'penaltyFunction2',
   name: 'Penalty function 2',
   xMin: '(point depends from dimension of the input)',
   outputMin: '(output depends from dimension of the input)',

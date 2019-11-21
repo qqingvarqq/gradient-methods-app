@@ -1,3 +1,12 @@
+import {TwoStepDifferenceGradientMethod} from './optimization/two-step-difference-gradient-method';
+import {DifferenceGradientMethod} from './optimization/difference-gradient-method';
+import {OptimizationAlgoMetadata} from './run-optimization';
 export * from './run-optimization';
-export * from './optimization/two-step-difference-gradient-method';
-export * from './optimization/difference-gradient-method';
+
+export const optimizationMethods: Map<
+  string,
+  OptimizationAlgoMetadata
+> = new Map([
+  [DifferenceGradientMethod.id, DifferenceGradientMethod],
+  [TwoStepDifferenceGradientMethod.id, TwoStepDifferenceGradientMethod],
+]);
