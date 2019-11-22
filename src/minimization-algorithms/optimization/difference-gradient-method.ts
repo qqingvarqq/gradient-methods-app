@@ -43,6 +43,6 @@ function differenceGradientMethod(
 
 export const DifferenceGradientMethod: OptimizationAlgoMetadata = {
   id: 'differenceGradientMethod',
-  name: 'difference-gradient method',
+  name: 'Difference-gradient method',
   method: differenceGradientMethod,
 };

@@ -40,7 +40,7 @@ export function getLenOfTheStepAndNextVector(
     fnOutputForVectorX - fnOutputForNextVectorX <=
     upperLimitation * prevLenOfTheStep
   ) {
-    prevLenOfTheStep /= 2;
+    prevLenOfTheStep /= 1.25;
     nextVectorX = calculateNextValue(
       vectorX,
       prevLenOfTheStep,

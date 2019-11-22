@@ -8,7 +8,7 @@ export const FunctionInfo: React.FC<{
   setOptimizationParams: Function;
 }> = props => {
   const {functionToOptimize, setOptimizationParams} = props;
-  const [epsilonInput, setEpsilonInput] = React.useState<string>('0.0001');
+  const [epsilonInput, setEpsilonInput] = React.useState<string>('0.00001');
   const [epsilonInputError, setEpsilonInputError] = React.useState<boolean>(
     false
   );

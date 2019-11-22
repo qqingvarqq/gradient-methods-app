@@ -26,19 +26,30 @@ class FunctionToCall {
     return this.callCount;
   }
 }
+function calculatePrecision(epsilon: number) {
+  const splitedPart = epsilon.toString().split('.');
+  if (splitedPart.length === 2) {
+    return splitedPart[1].length;
+  }
+  return 0;
+}
 export function runOptimization(
   method: Function,
   fn: Function,
   x: number[],
   epsilon: number
 ): OptimizationResultData {
+  const floatNumberPrecision = calculatePrecision(epsilon);
   const wrapedFn = new FunctionToCall(fn);
   const fnToCall = wrapedFn.callFn.bind(wrapedFn);
   const t1 = performance.now();
-  const [xMin, countOfIteration] = method(fnToCall, x, epsilon);
+  const [xMinUnrounded, countOfIteration] = method(fnToCall, x, epsilon);
   const t2 = performance.now();
   const countOfCalculationFX = wrapedFn.getCallCount();
-  const outputMin = fn(xMin);
+  const outputMin = fn(xMinUnrounded).toFixed(floatNumberPrecision);
+  const xMin = xMinUnrounded.map((num: number) =>
+    num.toFixed(floatNumberPrecision)
+  );
   const timeInMs = Math.round(t2 - t1);
   return {
     xMin,

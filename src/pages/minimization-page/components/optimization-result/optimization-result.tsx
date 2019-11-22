@@ -59,7 +59,7 @@ export const OptimizationResult: React.FC<{
       <div className={styles.root}>
         {optimizationResultData !== null ? (
           <>
-            <div className={styles.header}>{'Gradienth method'}</div>
+            <div className={styles.header}>{optimizationAlgoMetadata.name}</div>
             <div className={styles.table}>
               <div className={styles.table_item}>
                 <span>Count of Iterations</span>
@@ -79,7 +79,7 @@ export const OptimizationResult: React.FC<{
             </div>
             <div className={styles.minimum}>
               <div>
-                x<sub>min</sub> = {optimizationResultData.xMin}
+                x<sub>min</sub> = {optimizationResultData.xMin.join(' ')}
               </div>
               <div>
                 f(x<sub>min</sub>) = {optimizationResultData.outputMin}

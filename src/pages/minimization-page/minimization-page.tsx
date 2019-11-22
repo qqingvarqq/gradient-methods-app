@@ -19,26 +19,6 @@ export const MinimizationPage: React.FC<{
 }> = props => {
   const {functionToOptimize, onClickGoBackMainPage} = props;
   const [optimizationParams, setOptimizationParams] = React.useState<OptimizationParams | null>(null);
-  /*React.useEffect(() => {
-    const x = new Array(128).fill(0.5);
-    const epsilon = 0.000001;
-    console.log(
-      runOptimization(
-        oneStepDifferenceGradientMethod,
-        functionToOptimize.functionToCall,
-        x,
-        epsilon
-      )
-    );
-    console.log(
-      runOptimization(
-        twoStepDifferenceGradientMethod,
-        functionToOptimize.functionToCall,
-        x,
-        epsilon
-      )
-    );
-  });*/
   return (
     <div className={styles.root}>
       <div className={styles.container}>
