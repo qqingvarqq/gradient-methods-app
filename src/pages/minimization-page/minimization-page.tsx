@@ -6,7 +6,11 @@ import {
 } from '../../ui-components';
 import {FunctionMetadata} from '../../functions';
 import {FunctionInfo} from './components/function-info/function-info';
-import {OptimizationResult} from './components/optimization-result/optimization-result';
+import {OptimizationResult,OptimizationParams} from './components/optimization-result/optimization-result';
+import {
+  optimizationMethods,
+  OptimizationAlgoMetadata,
+} from '../../minimization-algorithms';
 import styles from './minimization-page.module.css';
 
 export const MinimizationPage: React.FC<{
@@ -14,10 +18,7 @@ export const MinimizationPage: React.FC<{
   onClickGoBackMainPage: () => void;
 }> = props => {
   const {functionToOptimize, onClickGoBackMainPage} = props;
-  const [optimizationParams, setOptimizationParams] = React.useState<{
-    epsilon: number;
-    vectorX: number[];
-  } | null>(null);
+  const [optimizationParams, setOptimizationParams] = React.useState<OptimizationParams | null>(null);
   /*React.useEffect(() => {
     const x = new Array(128).fill(0.5);
     const epsilon = 0.000001;
@@ -49,8 +50,18 @@ export const MinimizationPage: React.FC<{
         <FunctionInfo
           setOptimizationParams={setOptimizationParams}
           functionToOptimize={functionToOptimize}></FunctionInfo>
-        {optimizationParams!=null && <OptimizationResult></OptimizationResult>}
-        {optimizationParams!=null && <OptimizationResult></OptimizationResult>}
+        {optimizationParams != null &&
+          Array.from(
+            optimizationMethods.values()
+          ).map((optimizationAlgoMetadata: OptimizationAlgoMetadata) => (
+            <OptimizationResult
+              key={optimizationAlgoMetadata.id}
+              optimizationParams={optimizationParams}
+              functionToOptimize={functionToOptimize}
+              optimizationAlgoMetadata={
+                optimizationAlgoMetadata
+              }></OptimizationResult>
+          ))}
       </div>
     </div>
   );

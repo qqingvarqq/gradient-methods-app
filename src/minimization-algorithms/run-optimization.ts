@@ -39,7 +39,7 @@ export function runOptimization(
   const t2 = performance.now();
   const countOfCalculationFX = wrapedFn.getCallCount();
   const outputMin = fn(xMin);
-  const timeInMs = t2 - t1;
+  const timeInMs = Math.round(t2 - t1);
   return {
     xMin,
     outputMin,
