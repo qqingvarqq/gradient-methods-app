@@ -3,7 +3,7 @@ import * as React from 'react';
 import MinimizationWorker from '../../../../workers/minimization.worker.js';
 import {FunctionMetadata} from '../../../../functions';
 import {MinimizationWorkerMessageTypes} from '../../../../workers/worker-messages';
-import {Card} from '../../../../ui-components';
+import {Card, Button} from '../../../../ui-components';
 import {
   OptimizationAlgoMetadata,
   OptimizationResultData,
@@ -29,6 +29,7 @@ export const OptimizationResult: React.FC<{
     optimizationResultData,
     setOptimizationResultData,
   ] = React.useState<OptimizationResultData | null>(null);
+  const [showVectorXmin, setShowVectorXmin] = React.useState(false);
   React.useEffect(() => {
     setOptimizationResultData(null);
     let worker: Worker = new MinimizationWorker();
@@ -79,7 +80,17 @@ export const OptimizationResult: React.FC<{
             </div>
             <div className={styles.minimum}>
               <div>
-                x<sub>min</sub> = {optimizationResultData.xMin.join(' ')}
+                x<sub>min</sub> ={' '}
+                {showVectorXmin ? (
+                  optimizationResultData.xMin.join(' ')
+                ) : (
+                  <Button
+                    className={styles.more_info}
+                    accent
+                    onClick={() => setShowVectorXmin(true)}>
+                    ... show {optimizationResultData.xMin.length} items
+                  </Button>
+                )}
               </div>
               <div>
                 f(x<sub>min</sub>) = {optimizationResultData.outputMin}
