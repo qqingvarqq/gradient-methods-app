@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Card, SubmitButton, Input} from '../../../../ui-components';
+import {Card, Button, Input} from '../../../../ui-components';
 import {FunctionMetadata} from '../../../../functions';
 import styles from './function-info.module.css';
 
@@ -81,7 +81,7 @@ export const FunctionInfo: React.FC<{
               placeholder="Enter epsilon"></Input>
           </div>
           <div className={styles.optimize}>
-            <SubmitButton onClick={optimize}>Optimize</SubmitButton>
+            <Button onClick={optimize}>Optimize</Button>
           </div>
         </sub>
       </sub>
