@@ -98,7 +98,10 @@ export const OptimizationResult: React.FC<{
             </div>
           </>
         ) : (
-          'loading'
+          <div className={styles.loading_container}>
+            <div className={styles.loading_spinner} />
+            <div>calculating...</div>
+          </div>
         )}
       </div>
     </Card>
