@@ -2,6 +2,7 @@ import {
   dividedDifferences,
   findEuclidNorm,
   getLenOfTheStepAndNextVector,
+  addVectorsByRule,
 } from './utils';
 import {OptimizationAlgoMetadata} from '../run-optimization';
 function differenceGradientMethod(
@@ -33,8 +34,18 @@ function differenceGradientMethod(
     const nextVectorX = values[1];
     const fnOutputForNextVectorX = values[2];
     h = Math.min(h, findEuclidNorm(derivativeValues));
+    const diffBetweenSteps = Math.max.apply(
+      addVectorsByRule(
+        (x: number, y: number) => Math.abs(x - y),
+        vectorX,
+        nextVectorX
+      )
+    );
     vectorX = nextVectorX;
-    if (Math.abs(fnOutputForVectorX - fnOutputForNextVectorX) < epsilon) {
+    if (
+      Math.abs(fnOutputForVectorX - fnOutputForNextVectorX) < epsilon &&
+      diffBetweenSteps < epsilon
+    ) {
       break;
     }
   }

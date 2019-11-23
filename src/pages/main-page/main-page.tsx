@@ -15,15 +15,13 @@ export const MainPage: React.FC<{
           Chose function
         </div>
         <div className={styles.options_container}>
-          {functionsToOptimize.map(
-            (functionMetadata: FunctionMetadata) => (
-              <FunctionShortInfo
-                key={functionMetadata.id}
-                functionMetadata={functionMetadata}
-                onClick={() => onClickFunctionOption(functionMetadata.id)}
-              />
-            )
-          )}
+          {functionsToOptimize.map((functionMetadata: FunctionMetadata) => (
+            <FunctionShortInfo
+              key={functionMetadata.id}
+              functionMetadata={functionMetadata}
+              onClick={() => onClickFunctionOption(functionMetadata.id)}
+            />
+          ))}
         </div>
       </div>
     </div>

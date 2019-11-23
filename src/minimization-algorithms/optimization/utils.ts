@@ -63,8 +63,8 @@ function calculateNextValue(
   return res;
 }
 
-export function addVectors(
-  sumFn: Function,
+export function addVectorsByRule(
+  ruleFn: Function,
   vectorX: number[],
   vectorY: number[]
 ): number[] {
@@ -73,7 +73,7 @@ export function addVectors(
   }
   const res = new Array(vectorX.length);
   for (let i = 0; i < vectorX.length; i++) {
-    res[i] = sumFn(vectorX[i], vectorY[i]);
+    res[i] = ruleFn(vectorX[i], vectorY[i]);
   }
   return res;
 }

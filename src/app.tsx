@@ -26,7 +26,9 @@ export const App: React.FC = () => {
         return (
           <MinimizationPage
             //@ts-ignore functionsToOptimize.get can't return undefined
-            functionToOptimize={functionsToOptimize.get(route.params.functionId)}
+            functionToOptimize={functionsToOptimize.get(
+              route.params.functionId
+            )}
             onClickGoBackMainPage={goToMainPage}
           />
         );

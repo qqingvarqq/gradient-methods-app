@@ -6,7 +6,10 @@ import {
 } from '../../ui-components';
 import {FunctionMetadata} from '../../functions';
 import {FunctionInfo} from './components/function-info/function-info';
-import {OptimizationResult,OptimizationParams} from './components/optimization-result/optimization-result';
+import {
+  OptimizationResult,
+  OptimizationParams,
+} from './components/optimization-result/optimization-result';
 import {
   optimizationMethods,
   OptimizationAlgoMetadata,
@@ -18,7 +21,10 @@ export const MinimizationPage: React.FC<{
   onClickGoBackMainPage: () => void;
 }> = props => {
   const {functionToOptimize, onClickGoBackMainPage} = props;
-  const [optimizationParams, setOptimizationParams] = React.useState<OptimizationParams | null>(null);
+  const [
+    optimizationParams,
+    setOptimizationParams,
+  ] = React.useState<OptimizationParams | null>(null);
   return (
     <div className={styles.root}>
       <div className={styles.container}>

@@ -27,11 +27,12 @@ class FunctionToCall {
   }
 }
 function calculatePrecision(epsilon: number) {
-  const splitedPart = epsilon.toString().split('.');
-  if (splitedPart.length === 2) {
-    return splitedPart[1].length;
+  let precision = 0;
+  while (epsilon < 1) {
+    epsilon *= 10;
+    precision++;
   }
-  return 0;
+  return precision;
 }
 export function runOptimization(
   method: Function,
