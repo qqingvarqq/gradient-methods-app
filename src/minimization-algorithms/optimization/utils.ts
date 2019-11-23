@@ -41,6 +41,10 @@ export function getLenOfTheStepAndNextVector(
     upperLimitation * prevLenOfTheStep
   ) {
     prevLenOfTheStep /= 1.25;
+    //case when we have almost zeroo
+    if(prevLenOfTheStep === prevLenOfTheStep/1.25){
+      break;
+    }
     nextVectorX = calculateNextValue(
       vectorX,
       prevLenOfTheStep,

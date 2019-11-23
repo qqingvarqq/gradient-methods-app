@@ -27,7 +27,7 @@ export const FunctionInfo: React.FC<{
     }
     const vectorX = vectorXInput.split(',').map(parseFloat);
     if (
-      vectorX.find(val => isNaN(val)) === undefined &&
+      vectorX.find(val => isNaN(val)) !== undefined ||
       !functionToOptimize.isValidParams(vectorX)
     ) {
       isValid = false;
