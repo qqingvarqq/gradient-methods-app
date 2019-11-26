@@ -42,7 +42,7 @@ export function getLenOfTheStepAndNextVector(
   ) {
     prevLenOfTheStep /= 1.25;
     //case when we have almost zeroo
-    if(prevLenOfTheStep === prevLenOfTheStep/1.25){
+    if (prevLenOfTheStep === prevLenOfTheStep / 1.25) {
       break;
     }
     nextVectorX = calculateNextValue(
