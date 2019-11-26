@@ -22,3 +22,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
 }
+@media (max-width: 420px) {
+  .options_container {
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  }
+}

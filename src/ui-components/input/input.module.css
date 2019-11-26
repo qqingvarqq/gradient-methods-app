@@ -2,7 +2,7 @@
   border: none;
   font-size: 24px;
   background: none;
-  min-width: 300px;
+  min-width: 100px;
   height: 28px;
   padding: 0;
   transition: box-shadow 0.3s ease;
