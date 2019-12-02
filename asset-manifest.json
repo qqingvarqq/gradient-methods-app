@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/gradient-methods-app/static/css/main.1442a42e.chunk.css",
-    "main.js": "/gradient-methods-app/static/js/main.1a013cdb.chunk.js",
-    "main.js.map": "/gradient-methods-app/static/js/main.1a013cdb.chunk.js.map",
+    "main.js": "/gradient-methods-app/static/js/main.45efcce0.chunk.js",
+    "main.js.map": "/gradient-methods-app/static/js/main.45efcce0.chunk.js.map",
     "runtime-main.js": "/gradient-methods-app/static/js/runtime-main.755df07e.js",
     "runtime-main.js.map": "/gradient-methods-app/static/js/runtime-main.755df07e.js.map",
     "static/js/2.7459459f.chunk.js": "/gradient-methods-app/static/js/2.7459459f.chunk.js",
@@ -10,7 +10,7 @@
     "16a68a57d6b9d1e4029e.worker.js": "/gradient-methods-app/16a68a57d6b9d1e4029e.worker.js",
     "16a68a57d6b9d1e4029e.worker.js.map": "/gradient-methods-app/16a68a57d6b9d1e4029e.worker.js.map",
     "index.html": "/gradient-methods-app/index.html",
-    "precache-manifest.f7db222b983ecbe4a5c5e4eedee7bc0e.js": "/gradient-methods-app/precache-manifest.f7db222b983ecbe4a5c5e4eedee7bc0e.js",
+    "precache-manifest.30d3cc2e6bc1cb17e2d00facdf4182ac.js": "/gradient-methods-app/precache-manifest.30d3cc2e6bc1cb17e2d00facdf4182ac.js",
     "service-worker.js": "/gradient-methods-app/service-worker.js",
     "static/css/main.1442a42e.chunk.css.map": "/gradient-methods-app/static/css/main.1442a42e.chunk.css.map",
     "static/media/penalty-function-1.svg": "/gradient-methods-app/static/media/penalty-function-1.857c236f.svg",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.755df07e.js",
     "static/js/2.7459459f.chunk.js",
     "static/css/main.1442a42e.chunk.css",
-    "static/js/main.1a013cdb.chunk.js"
+    "static/js/main.45efcce0.chunk.js"
   ]
 }
