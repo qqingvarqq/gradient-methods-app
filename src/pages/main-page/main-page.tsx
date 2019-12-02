@@ -12,7 +12,7 @@ export const MainPage: React.FC<{
     <div className={styles.root}>
       <div className={styles.container}>
         <div className={styles.header} title="Chose function to minimize">
-          Chose function
+          Choose function
         </div>
         <div className={styles.options_container}>
           {functionsToOptimize.map((functionMetadata: FunctionMetadata) => (
