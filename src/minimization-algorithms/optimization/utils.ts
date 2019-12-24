@@ -81,3 +81,7 @@ export function addVectorsByRule(
   }
   return res;
 }
+
+export function getNextLenOfTheStep(len: number): number {
+  return (len + 1) / 2;
+}
