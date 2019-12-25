@@ -4,7 +4,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gradient-methods-app/68ea4c58307710841111.worker.js"
   },
   {
-    "revision": "c732adedb7d93cc197f32ba4d74aa333",
+    "revision": "b5f61765f46f80b89d45662d56c0670b",
     "url": "/gradient-methods-app/index.html"
   },
   {
