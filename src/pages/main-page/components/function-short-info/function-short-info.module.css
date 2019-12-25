@@ -19,9 +19,10 @@
   min-height: 1px;
   background-color: var(--divider-color);
 }
-.function_img {
+img.function_img {
   margin: 8px 0px 8px 0px;
   width: 100%;
   height: max-content;
   max-width: 512px;
+  filter: var(--image-filter);
 }
