@@ -34,7 +34,7 @@ function twoStepDifferenceGradientMethod(
       alpha,
       derivativeValuesU
     );
-    alpha = getNextLenOfTheStep(valuesU[0]);
+    alpha = getNextLenOfTheStep(alpha, valuesU[0]);
     const vectorU = valuesU[1];
     const step2VectorX = addVectorsByRule(
       (x: number, y: number) => gamma * x + (1 - gamma) * y,
@@ -55,7 +55,7 @@ function twoStepDifferenceGradientMethod(
       beta,
       derivativeValuesStep2
     );
-    beta = getNextLenOfTheStep(valuesStep2[0]);
+    beta = getNextLenOfTheStep(beta, valuesStep2[0]);
     const nextVectorX = valuesStep2[1];
     const fnOutputForNextVectorX = valuesStep2[2];
     h1 = Math.min(h1, findEuclidNorm(derivativeValuesU));

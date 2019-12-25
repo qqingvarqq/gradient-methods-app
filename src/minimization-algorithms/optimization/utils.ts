@@ -82,6 +82,9 @@ export function addVectorsByRule(
   return res;
 }
 
-export function getNextLenOfTheStep(len: number): number {
-  return (len + 1) / 2;
+export function getNextLenOfTheStep(prevLen: number, nextLen: number): number {
+  if (prevLen === nextLen) {
+    return nextLen;
+  }
+  return nextLen * 1.25;
 }

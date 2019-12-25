@@ -31,7 +31,7 @@ function differenceGradientMethod(
       alpha,
       derivativeValues
     );
-    alpha = getNextLenOfTheStep(values[0]);
+    alpha = getNextLenOfTheStep(alpha, values[0]);
     const nextVectorX = values[1];
     const fnOutputForNextVectorX = values[2];
     h = Math.min(h, findEuclidNorm(derivativeValues));
