@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/gradient-methods-app/static/css/main.1442a42e.chunk.css",
-    "main.js": "/gradient-methods-app/static/js/main.e8e97c98.chunk.js",
-    "main.js.map": "/gradient-methods-app/static/js/main.e8e97c98.chunk.js.map",
+    "main.css": "/gradient-methods-app/static/css/main.20ec705f.chunk.css",
+    "main.js": "/gradient-methods-app/static/js/main.29f1778b.chunk.js",
+    "main.js.map": "/gradient-methods-app/static/js/main.29f1778b.chunk.js.map",
     "runtime-main.js": "/gradient-methods-app/static/js/runtime-main.03578b80.js",
     "runtime-main.js.map": "/gradient-methods-app/static/js/runtime-main.03578b80.js.map",
     "static/js/2.e45a55d4.chunk.js": "/gradient-methods-app/static/js/2.e45a55d4.chunk.js",
@@ -10,9 +10,9 @@
     "68ea4c58307710841111.worker.js": "/gradient-methods-app/68ea4c58307710841111.worker.js",
     "68ea4c58307710841111.worker.js.map": "/gradient-methods-app/68ea4c58307710841111.worker.js.map",
     "index.html": "/gradient-methods-app/index.html",
-    "precache-manifest.a93be5614506d8b28eea116dfe336f54.js": "/gradient-methods-app/precache-manifest.a93be5614506d8b28eea116dfe336f54.js",
+    "precache-manifest.1370d6cc9d8334f88c7f1a82181a9d48.js": "/gradient-methods-app/precache-manifest.1370d6cc9d8334f88c7f1a82181a9d48.js",
     "service-worker.js": "/gradient-methods-app/service-worker.js",
-    "static/css/main.1442a42e.chunk.css.map": "/gradient-methods-app/static/css/main.1442a42e.chunk.css.map",
+    "static/css/main.20ec705f.chunk.css.map": "/gradient-methods-app/static/css/main.20ec705f.chunk.css.map",
     "static/js/2.e45a55d4.chunk.js.LICENSE": "/gradient-methods-app/static/js/2.e45a55d4.chunk.js.LICENSE",
     "static/media/penalty-function-1.svg": "/gradient-methods-app/static/media/penalty-function-1.857c236f.svg",
     "static/media/penalty-function-2.svg": "/gradient-methods-app/static/media/penalty-function-2.77d1764b.svg",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.03578b80.js",
     "static/js/2.e45a55d4.chunk.js",
-    "static/css/main.1442a42e.chunk.css",
-    "static/js/main.e8e97c98.chunk.js"
+    "static/css/main.20ec705f.chunk.css",
+    "static/js/main.29f1778b.chunk.js"
   ]
 }
