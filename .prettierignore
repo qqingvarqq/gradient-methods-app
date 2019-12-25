@@ -1,0 +1,10 @@
+*.*
+!*.css
+!*.js
+!*.json
+!*.jsx
+!*.md
+!*.mdx
+!*.ts
+!*.tsx
+!*.yml
