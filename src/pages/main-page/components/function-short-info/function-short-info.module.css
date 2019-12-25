@@ -8,7 +8,7 @@
   border-radius: 8px;
 }
 .root:hover {
-  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 2px 1px var(--divider-color);
 }
 .info {
   font-size: 32px;
@@ -17,7 +17,7 @@
   margin: 16px 0px 16px 0px;
   width: 100%;
   min-height: 1px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--divider-color);
 }
 .function_img {
   margin: 8px 0px 8px 0px;

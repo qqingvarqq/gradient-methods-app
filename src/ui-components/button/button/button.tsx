@@ -3,13 +3,13 @@ import styles from './button.module.css';
 import {BaseButton, BaseButtonProps} from '../base-button/base-button';
 
 export const Button: React.FC<BaseButtonProps & {
-  accent?: boolean;
+  secondary?: boolean;
 }> = props => {
-  const {className = '', accent, ...rest} = props;
+  const {className = '', secondary, ...rest} = props;
 
   return (
     <BaseButton
-      className={`${styles.root} ${accent && styles.accent} ${className}`}
+      className={`${styles.root} ${secondary && styles.secondary} ${className}`}
       {...rest}
     />
   );

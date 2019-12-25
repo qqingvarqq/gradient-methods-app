@@ -8,12 +8,13 @@
   transition: box-shadow 0.3s ease;
   margin: 0;
   box-sizing: border-box;
+  color: var(--primary-font-color);
 }
 .root:hover {
-  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 2px 1px var(--divider-color);
 }
 .root:focus {
-  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 2px 1px var(--divider-color);
   outline: none;
 }
 
@@ -29,5 +30,5 @@ input.root[type='number'] {
 .error,
 .error:hover,
 .error:focus {
-  box-shadow: 0px 0px 2px 1px rgba(253, 76, 76, 0.7);
+  box-shadow: 0px 0px 2px 1px var(--error-color);
 }

@@ -14,7 +14,7 @@
 
 .about_header {
   font-size: 64px;
-  color: rgb(60, 194, 62);
+  color: var(--accent-font-color);
 }
 .about_function {
   max-width: 632px;
@@ -27,7 +27,7 @@
 }
 .gap {
   margin: 20px 0px 20px 0px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--divider-color);
   min-height: 1px;
   width: 100%;
 }

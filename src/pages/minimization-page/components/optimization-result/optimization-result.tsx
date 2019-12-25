@@ -86,7 +86,7 @@ export const OptimizationResult: React.FC<{
                 ) : (
                   <Button
                     className={styles.more_info}
-                    accent
+                    secondary
                     onClick={() => setShowVectorXmin(true)}>
                     ... show {optimizationResultData.xMin.length} items
                   </Button>

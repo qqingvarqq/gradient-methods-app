@@ -14,7 +14,7 @@
   margin-bottom: 64px;
 }
 .header {
-  color: rgb(60, 194, 62);
+  color: var(--accent-font-color);
   font-size: 100px;
   font-weight: 400;
 }

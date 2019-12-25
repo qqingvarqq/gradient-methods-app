@@ -10,7 +10,7 @@
 
 .header {
   font-size: 64px;
-  color: rgb(60, 194, 62);
+  color: var(--accent-font-color);
 }
 
 .minimum {
@@ -36,7 +36,7 @@
   height: 1px;
   min-height: 1px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--divider-color);
 }
 .more_info {
   display: inline;
@@ -55,7 +55,7 @@
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  border-top: 6px rgb(60, 194, 62) solid;
+  border-top: 6px var(--accent-color) solid;
   border: 4px transparent solid;
   box-sizing: border-box;
   animation: spinner-animation 1s infinite;
@@ -63,10 +63,10 @@
 @keyframes spinner-animation {
   0% {
     transform: rotate(0deg);
-    border-top: 5px rgb(60, 194, 62) solid;
+    border-top: 5px var(--accent-color) solid;
   }
   100% {
     transform: rotate(360deg);
-    border-top: 5px rgb(60, 194, 62) solid;
+    border-top: 5px var(--accent-color) solid;
   }
 }
