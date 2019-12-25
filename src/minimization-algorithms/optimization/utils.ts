@@ -35,7 +35,7 @@ export function getLenOfTheStepAndNextVector(
     derivativeValues
   );
   let fnOutputForNextVectorX = func(nextVectorX);
-  const upperLimitation = Math.pow(findEuclidNorm(derivativeValues), 2) * 0.5;
+  const upperLimitation = Math.pow(findEuclidNorm(derivativeValues), 2) * 0.8;
   while (
     fnOutputForVectorX - fnOutputForNextVectorX <=
     upperLimitation * prevLenOfTheStep
