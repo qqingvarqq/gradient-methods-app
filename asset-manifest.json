@@ -1,28 +1,30 @@
 {
   "files": {
-    "main.css": "/gradient-methods-app/static/css/main.20ec705f.chunk.css",
-    "main.js": "/gradient-methods-app/static/js/main.29f1778b.chunk.js",
-    "main.js.map": "/gradient-methods-app/static/js/main.29f1778b.chunk.js.map",
+    "main.css": "/gradient-methods-app/static/css/main.d1fe9f51.chunk.css",
+    "main.js": "/gradient-methods-app/static/js/main.6bfba470.chunk.js",
+    "main.js.map": "/gradient-methods-app/static/js/main.6bfba470.chunk.js.map",
     "runtime-main.js": "/gradient-methods-app/static/js/runtime-main.03578b80.js",
     "runtime-main.js.map": "/gradient-methods-app/static/js/runtime-main.03578b80.js.map",
-    "static/js/2.e45a55d4.chunk.js": "/gradient-methods-app/static/js/2.e45a55d4.chunk.js",
-    "static/js/2.e45a55d4.chunk.js.map": "/gradient-methods-app/static/js/2.e45a55d4.chunk.js.map",
-    "68ea4c58307710841111.worker.js": "/gradient-methods-app/68ea4c58307710841111.worker.js",
-    "68ea4c58307710841111.worker.js.map": "/gradient-methods-app/68ea4c58307710841111.worker.js.map",
+    "static/js/2.cb583cca.chunk.js": "/gradient-methods-app/static/js/2.cb583cca.chunk.js",
+    "static/js/2.cb583cca.chunk.js.map": "/gradient-methods-app/static/js/2.cb583cca.chunk.js.map",
+    "2604806ff2f264c11628.worker.js": "/gradient-methods-app/2604806ff2f264c11628.worker.js",
+    "2604806ff2f264c11628.worker.js.map": "/gradient-methods-app/2604806ff2f264c11628.worker.js.map",
     "index.html": "/gradient-methods-app/index.html",
-    "precache-manifest.8afa0a43b3704ac71668e95e7f6ba35b.js": "/gradient-methods-app/precache-manifest.8afa0a43b3704ac71668e95e7f6ba35b.js",
+    "precache-manifest.fafa41ed071e8fd92e153af540e9140e.js": "/gradient-methods-app/precache-manifest.fafa41ed071e8fd92e153af540e9140e.js",
     "service-worker.js": "/gradient-methods-app/service-worker.js",
-    "static/css/main.20ec705f.chunk.css.map": "/gradient-methods-app/static/css/main.20ec705f.chunk.css.map",
-    "static/js/2.e45a55d4.chunk.js.LICENSE": "/gradient-methods-app/static/js/2.e45a55d4.chunk.js.LICENSE",
+    "static/css/main.d1fe9f51.chunk.css.map": "/gradient-methods-app/static/css/main.d1fe9f51.chunk.css.map",
+    "static/js/2.cb583cca.chunk.js.LICENSE": "/gradient-methods-app/static/js/2.cb583cca.chunk.js.LICENSE",
+    "static/media/dixon-price-function.svg": "/gradient-methods-app/static/media/dixon-price-function.fad8823a.svg",
     "static/media/penalty-function-1.svg": "/gradient-methods-app/static/media/penalty-function-1.857c236f.svg",
     "static/media/penalty-function-2.svg": "/gradient-methods-app/static/media/penalty-function-2.77d1764b.svg",
     "static/media/powell-function.svg": "/gradient-methods-app/static/media/powell-function.e9525fb4.svg",
-    "static/media/rosenbrock-function.svg": "/gradient-methods-app/static/media/rosenbrock-function.dfc14948.svg"
+    "static/media/rosenbrock-function.svg": "/gradient-methods-app/static/media/rosenbrock-function.dfc14948.svg",
+    "static/media/zakharov-function.svg": "/gradient-methods-app/static/media/zakharov-function.06bce067.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.03578b80.js",
-    "static/js/2.e45a55d4.chunk.js",
-    "static/css/main.20ec705f.chunk.css",
-    "static/js/main.29f1778b.chunk.js"
+    "static/js/2.cb583cca.chunk.js",
+    "static/css/main.d1fe9f51.chunk.css",
+    "static/js/main.6bfba470.chunk.js"
   ]
 }
