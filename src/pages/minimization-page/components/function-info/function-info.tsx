@@ -12,9 +12,7 @@ export const FunctionInfo: React.FC<{
   const [epsilonInputError, setEpsilonInputError] = React.useState<boolean>(
     false
   );
-  const [vectorXInput, setVectorXInput] = React.useState<string>(
-    `2,2,2,2,2,2,2,2`
-  );
+  const [vectorXInput, setVectorXInput] = React.useState<string>(`2,3,4,5`);
   const [vectorXInputError, setVectorXInputError] = React.useState<boolean>(
     false
   );

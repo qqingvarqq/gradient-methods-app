@@ -5,7 +5,7 @@ function validateZakharovFunctionParams(x: number[]) {
 }
 function zakharovFunction(x: number[]): number {
   if (!validateZakharovFunctionParams(x)) {
-    throw new Error(`x :${x} should be array with length at least 2`);
+    throw new Error(`x :${x} should be array with length at least 1`);
   }
   let firstSum: number = 0;
   let secondSum: number = 0;
@@ -19,7 +19,7 @@ function zakharovFunction(x: number[]): number {
 export const ZakharovFunction: FunctionMetadata = {
   srcUrl: ZakharovFunctionSrc,
   id: 'zakharovFunction',
-  name: 'Zakharov Function',
+  name: 'Zakharov function',
   xMin: '[0, 0, 0, 0, ...]',
   outputMin: '0',
   functionToCall: zakharovFunction,

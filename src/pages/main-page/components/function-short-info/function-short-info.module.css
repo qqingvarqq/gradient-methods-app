@@ -1,5 +1,6 @@
 .root {
   min-height: 180px;
+  max-height: 180px;
   display: flex;
   flex-direction: column;
   padding: 16px;
@@ -21,8 +22,19 @@
 }
 img.function_img {
   margin: 8px 0px 8px 0px;
-  width: 100%;
+  width: min-content;
   height: max-content;
-  max-width: 512px;
   filter: var(--image-filter);
+}
+@media (min-width: 512px) {
+  img.function_img {
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 512px) {
+  img.function_img {
+    max-width: calc(100vw - 64px);
+    width: max-content;
+  }
 }

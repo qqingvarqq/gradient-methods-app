@@ -17,7 +17,7 @@
   color: var(--accent-font-color);
 }
 img.about_function {
-  max-width: 632px;
+  max-width: max-content;
   width: 100%;
   filter: var(--image-filter);
 }

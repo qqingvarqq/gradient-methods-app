@@ -5,7 +5,7 @@ function validateDixonPriceFunctionParams(x: number[]) {
 }
 function dixonPriceFunction(x: number[]): number {
   if (!validateDixonPriceFunctionParams(x)) {
-    throw new Error(`x :${x} should be array with length at least 2`);
+    throw new Error(`x :${x} should be array with length at least 1`);
   }
   let firstSum: number = Math.pow(x[0] - 1, 2);
   let secondSum: number = 0;
