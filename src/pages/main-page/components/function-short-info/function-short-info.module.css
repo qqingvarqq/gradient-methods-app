@@ -13,6 +13,10 @@
 }
 .info {
   font-size: 32px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  min-height: 38px;
 }
 .divider {
   margin: 16px 0px 16px 0px;

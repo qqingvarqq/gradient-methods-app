@@ -8,7 +8,7 @@ export const FunctionShortInfo: React.FC<{
 }> = props => {
   const {functionMetadata, ...rest} = props;
   return (
-    <div className={styles.root} {...rest}>
+    <div title={functionMetadata.name} className={styles.root} {...rest}>
       <div className={styles.info}>{functionMetadata.name}</div>
       <div className={styles.divider}></div>
       <img

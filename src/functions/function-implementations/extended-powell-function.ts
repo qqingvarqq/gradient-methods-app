@@ -1,10 +1,10 @@
-import PowellFunctionSrc from './assets/powell-function.svg';
+import ExtendedPowellFunctionSrc from './assets/extended-powell-function.svg';
 import {FunctionMetadata} from '../function';
-function validatePowellFunctionParams(x: number[]) {
+function validateExtendedPowellFunctionParams(x: number[]) {
   return x.length >= 4 && x.length % 4 === 0;
 }
-function powellFunction(x: number[]): number {
-  if (!validatePowellFunctionParams(x)) {
+function extendedPowellFunction(x: number[]): number {
+  if (!validateExtendedPowellFunctionParams(x)) {
     throw new Error(
       `x :${x} should be array with length at least 4 length can be divided by 4 without remainder`
     );
@@ -20,12 +20,12 @@ function powellFunction(x: number[]): number {
   return res;
 }
 
-export const PowellFunction: FunctionMetadata = {
-  srcUrl: PowellFunctionSrc,
+export const ExtendedPowellFunction: FunctionMetadata = {
+  srcUrl: ExtendedPowellFunctionSrc,
   id: 'powellFunction',
-  name: 'Powell function',
+  name: 'Extended Powell function',
   xMin: '[0, 0, 0, 0, ...]',
   outputMin: '0',
-  functionToCall: powellFunction,
-  isValidParams: validatePowellFunctionParams,
+  functionToCall: extendedPowellFunction,
+  isValidParams: validateExtendedPowellFunctionParams,
 };

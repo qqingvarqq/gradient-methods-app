@@ -2,11 +2,11 @@ import PenaltyFunction2Src from './assets/penalty-function-2.svg';
 import {FunctionMetadata} from '../function';
 
 function validatePenaltyFunction2Params(x: number[]) {
-  return x.length >= 2;
+  return x.length >= 1;
 }
 function penaltyFunction2(x: number[]): number {
   if (!validatePenaltyFunction2Params(x)) {
-    throw new Error(`x :${x} should be array with length at least 2`);
+    throw new Error(`x :${x} should be array with length at least 1`);
   }
   let firstSum: number = 0;
   let secondSum: number = 0;
