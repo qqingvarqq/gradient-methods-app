@@ -22,7 +22,7 @@ function extendedRosenbrockFunction(x: number[]): number {
 
 export const ExtendedRosenbrockFunction: FunctionMetadata = {
   srcUrl: ExtendedRosenbrockFunctionSrc,
-  id: 'rosenbrockFunction',
+  id: 'extendedRosenbrockFunction',
   name: 'Extended Rosenbrock function',
   xMin: '[1, 1, 1, 1, 1, 1, ...]',
   outputMin: '0',

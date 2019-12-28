@@ -22,7 +22,7 @@ function extendedPowellFunction(x: number[]): number {
 
 export const ExtendedPowellFunction: FunctionMetadata = {
   srcUrl: ExtendedPowellFunctionSrc,
-  id: 'powellFunction',
+  id: 'extendedPowellFunction',
   name: 'Extended Powell function',
   xMin: '[0, 0, 0, 0, ...]',
   outputMin: '0',

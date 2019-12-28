@@ -8,6 +8,7 @@ import {StyblinskiTangFunction} from './function-implementations/styblinski-tang
 import {PermFunctionBeta} from './function-implementations/perm-function-beta';
 import {SumSquaresFunction} from './function-implementations/sum-squares-function';
 import {ExtendedHimmelblauFunction} from './function-implementations/extended-himmelblau-function';
+import {ExtendedMieleAndCantrellFunction} from './function-implementations/extended-miele-cantrell-function';
 import {FunctionMetadata} from './function';
 export * from './function';
 
@@ -22,6 +23,7 @@ const functionsEntries: Array<[string, FunctionMetadata]> = [
   [PenaltyFunction2.id, PenaltyFunction2],
   [SumSquaresFunction.id, SumSquaresFunction],
   [ExtendedHimmelblauFunction.id, ExtendedHimmelblauFunction],
+  [ExtendedMieleAndCantrellFunction.id, ExtendedMieleAndCantrellFunction],
 ];
 functionsEntries.sort((first, second) =>
   first[1].name.localeCompare(second[1].name)
