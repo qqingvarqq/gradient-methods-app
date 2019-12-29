@@ -9,6 +9,10 @@ import {PermFunctionBeta} from './function-implementations/perm-function-beta';
 import {SumSquaresFunction} from './function-implementations/sum-squares-function';
 import {ExtendedHimmelblauFunction} from './function-implementations/extended-himmelblau-function';
 import {ExtendedMieleAndCantrellFunction} from './function-implementations/extended-miele-cantrell-function';
+import {ExtendedFreudensteinRothFunction} from './function-implementations/extended-freudenstein-roth-function';
+import {Raydan2Function} from './function-implementations/raydan-2-function';
+import {TridFunction} from './function-implementations/trid-function';
+import {PerturbedQuadraticFunction} from './function-implementations/perturbed-quadratic-function';
 import {FunctionMetadata} from './function';
 export * from './function';
 
@@ -24,6 +28,10 @@ const functionsEntries: Array<[string, FunctionMetadata]> = [
   [SumSquaresFunction.id, SumSquaresFunction],
   [ExtendedHimmelblauFunction.id, ExtendedHimmelblauFunction],
   [ExtendedMieleAndCantrellFunction.id, ExtendedMieleAndCantrellFunction],
+  [ExtendedFreudensteinRothFunction.id, ExtendedFreudensteinRothFunction],
+  [Raydan2Function.id, Raydan2Function],
+  [TridFunction.id, TridFunction],
+  [PerturbedQuadraticFunction.id, PerturbedQuadraticFunction],
 ];
 functionsEntries.sort((first, second) =>
   first[1].name.localeCompare(second[1].name)
