@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/gradient-methods-app/static/css/main.9185f23b.chunk.css",
-    "main.js": "/gradient-methods-app/static/js/main.1a5c99ba.chunk.js",
-    "main.js.map": "/gradient-methods-app/static/js/main.1a5c99ba.chunk.js.map",
+    "main.css": "/gradient-methods-app/static/css/main.0a428020.chunk.css",
+    "main.js": "/gradient-methods-app/static/js/main.8a76374a.chunk.js",
+    "main.js.map": "/gradient-methods-app/static/js/main.8a76374a.chunk.js.map",
     "runtime-main.js": "/gradient-methods-app/static/js/runtime-main.03578b80.js",
     "runtime-main.js.map": "/gradient-methods-app/static/js/runtime-main.03578b80.js.map",
     "static/js/2.37e4e199.chunk.js": "/gradient-methods-app/static/js/2.37e4e199.chunk.js",
     "static/js/2.37e4e199.chunk.js.map": "/gradient-methods-app/static/js/2.37e4e199.chunk.js.map",
-    "4a07f61b2b5278c0241e.worker.js": "/gradient-methods-app/4a07f61b2b5278c0241e.worker.js",
-    "4a07f61b2b5278c0241e.worker.js.map": "/gradient-methods-app/4a07f61b2b5278c0241e.worker.js.map",
+    "ffe747d6b15986900054.worker.js": "/gradient-methods-app/ffe747d6b15986900054.worker.js",
+    "ffe747d6b15986900054.worker.js.map": "/gradient-methods-app/ffe747d6b15986900054.worker.js.map",
     "index.html": "/gradient-methods-app/index.html",
-    "precache-manifest.822950bb80f9e22dcf5c32c7e1692d03.js": "/gradient-methods-app/precache-manifest.822950bb80f9e22dcf5c32c7e1692d03.js",
+    "precache-manifest.8d0f4502de033d99a3fbb7427d2fea01.js": "/gradient-methods-app/precache-manifest.8d0f4502de033d99a3fbb7427d2fea01.js",
     "service-worker.js": "/gradient-methods-app/service-worker.js",
-    "static/css/main.9185f23b.chunk.css.map": "/gradient-methods-app/static/css/main.9185f23b.chunk.css.map",
+    "static/css/main.0a428020.chunk.css.map": "/gradient-methods-app/static/css/main.0a428020.chunk.css.map",
     "static/js/2.37e4e199.chunk.js.LICENSE": "/gradient-methods-app/static/js/2.37e4e199.chunk.js.LICENSE",
     "static/media/dixon-price-function.svg": "/gradient-methods-app/static/media/dixon-price-function.fad8823a.svg",
     "static/media/extended-freudenstein-roth-function.svg": "/gradient-methods-app/static/media/extended-freudenstein-roth-function.ab8d02be.svg",
@@ -33,7 +33,7 @@
   "entrypoints": [
     "static/js/runtime-main.03578b80.js",
     "static/js/2.37e4e199.chunk.js",
-    "static/css/main.9185f23b.chunk.css",
-    "static/js/main.1a5c99ba.chunk.js"
+    "static/css/main.0a428020.chunk.css",
+    "static/js/main.8a76374a.chunk.js"
   ]
 }
