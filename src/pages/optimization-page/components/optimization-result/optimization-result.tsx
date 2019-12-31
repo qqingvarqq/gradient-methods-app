@@ -55,6 +55,7 @@ export const OptimizationResult: React.FC<{
       worker.terminate();
     };
   }, [optimizationAlgoMetadata, optimizationParams, functionToOptimize]);
+  React.useEffect(() => setShowVectorXmin(false), [optimizationResultData]);
   return (
     <Card>
       <div className={styles.root}>
