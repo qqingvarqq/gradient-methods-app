@@ -1,13 +1,13 @@
 import * as React from 'react';
 //@ts-ignore
-import MinimizationWorker from '../../../../workers/minimization.worker.js';
+import OptimizationWorker from '../../../../workers/optimization.worker.js';
 import {FunctionMetadata} from '../../../../functions';
-import {MinimizationWorkerMessageTypes} from '../../../../workers/worker-messages';
+import {OptimizationPageWorkerMessageTypes} from '../../../../workers/worker-messages';
 import {Card, Button} from '../../../../ui-components';
 import {
   OptimizationAlgoMetadata,
   OptimizationResultData,
-} from '../../../../minimization-algorithms';
+} from '../../../../optimization-algorithms';
 
 import styles from './optimization-result.module.css';
 
@@ -32,20 +32,20 @@ export const OptimizationResult: React.FC<{
   const [showVectorXmin, setShowVectorXmin] = React.useState(false);
   React.useEffect(() => {
     setOptimizationResultData(null);
-    let worker: Worker = new MinimizationWorker();
+    let worker: Worker = new OptimizationWorker();
     worker.postMessage([
-      MinimizationWorkerMessageTypes.OPTIMIZE_FUNCTION,
+      OptimizationPageWorkerMessageTypes.OPTIMIZE_FUNCTION,
       optimizationParams.vectorX,
       optimizationParams.epsilon,
       functionToOptimize.id,
       optimizationAlgoMetadata.id,
     ]);
     worker.addEventListener('message', (event: MessageEvent) => {
-      const data: [MinimizationWorkerMessageTypes, OptimizationResultData] =
+      const data: [OptimizationPageWorkerMessageTypes, OptimizationResultData] =
         event.data;
       const [messageType, result] = data;
       if (
-        messageType !== MinimizationWorkerMessageTypes.RSULT_OF_OPTIMIZATION
+        messageType !== OptimizationPageWorkerMessageTypes.RSULT_OF_OPTIMIZATION
       ) {
         return;
       }

@@ -1,7 +1,7 @@
 import * as React from 'react';
 export enum Pages {
   MAIN = '',
-  MINIMIZATION = 'minimize',
+  OPTIMIZATION = 'optimize',
 }
 
 interface Route {
@@ -24,7 +24,7 @@ class Router {
       case Pages.MAIN:
         url = `/${page}`;
         break;
-      case Pages.MINIMIZATION:
+      case Pages.OPTIMIZATION:
         if (params.functionId === undefined || params.functionId.length === 0) {
           break;
         }
@@ -43,7 +43,7 @@ class Router {
       case Pages.MAIN:
         route = {page, params: {}};
         break;
-      case Pages.MINIMIZATION:
+      case Pages.OPTIMIZATION:
         if (params.length === 1) {
           route = {
             page,

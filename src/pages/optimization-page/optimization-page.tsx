@@ -13,10 +13,10 @@ import {
 import {
   optimizationMethods,
   OptimizationAlgoMetadata,
-} from '../../minimization-algorithms';
-import styles from './minimization-page.module.css';
+} from '../../optimization-algorithms';
+import styles from './optimization-page.module.css';
 
-export const MinimizationPage: React.FC<{
+export const OptimizationPage: React.FC<{
   functionToOptimize: FunctionMetadata;
   onClickGoBackMainPage: () => void;
 }> = props => {
