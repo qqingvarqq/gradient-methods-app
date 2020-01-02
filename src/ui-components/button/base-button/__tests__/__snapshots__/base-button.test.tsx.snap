@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseButton should render without crashing 1`] = `
+<DocumentFragment>
+  <button
+    class="root "
+  >
+    btn
+  </button>
+</DocumentFragment>
+`;

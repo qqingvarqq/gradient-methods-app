@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should render children 1`] = `
+<DocumentFragment>
+  <div
+    class="root "
+  >
+    <div>
+      Hello From Card
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Card should render without crashing 1`] = `
+<DocumentFragment>
+  <div
+    class="root "
+  />
+</DocumentFragment>
+`;

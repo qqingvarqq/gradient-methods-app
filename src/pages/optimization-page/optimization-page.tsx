@@ -30,7 +30,7 @@ export const OptimizationPage: React.FC<{
       <div className={styles.container}>
         <NavigationHeader>
           <IconButton
-            iconType={IconButtonTypes.ARROWLEFT}
+            iconType={IconButtonTypes.ARROW_LEFT}
             onClick={onClickGoBackMainPage}></IconButton>
         </NavigationHeader>
         <FunctionInfo

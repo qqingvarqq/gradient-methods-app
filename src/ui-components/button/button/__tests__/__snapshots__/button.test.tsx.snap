@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render secondary button 1`] = `
+<DocumentFragment>
+  <button
+    class="root root secondary "
+  >
+     btn
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button should render without crashing 1`] = `
+<DocumentFragment>
+  <button
+    class="root root undefined "
+  >
+    btn
+  </button>
+</DocumentFragment>
+`;

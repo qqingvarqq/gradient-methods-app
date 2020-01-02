@@ -3,13 +3,16 @@ import styles from './icon-button.module.css';
 import {BaseButton, BaseButtonProps} from '../base-button/base-button';
 
 export enum IconButtonTypes {
-  ARROWLEFT,
+  ARROW_LEFT = 'ARROW_LEFT',
+  ARROW_RIGHT = 'ARROW_RIGHT',
 }
 
 function getIcon(iconType?: IconButtonTypes): string {
   switch (iconType) {
-    case IconButtonTypes.ARROWLEFT:
+    case IconButtonTypes.ARROW_LEFT:
       return '←';
+    case IconButtonTypes.ARROW_RIGHT:
+      return '→';
     default:
       return '';
   }
@@ -21,7 +24,7 @@ function getInlineStyles(size: string) {
 
 interface IconButtonProps extends BaseButtonProps {
   size?: string;
-  iconType?: IconButtonTypes;
+  iconType: IconButtonTypes;
 }
 
 export const IconButton: React.FC<IconButtonProps> = (

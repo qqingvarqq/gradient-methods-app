@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconButton should render without crashing 1`] = `
+<DocumentFragment>
+  <button
+    class="root root "
+    style="height: 48px; width: 48px; font-size: 48px;"
+  >
+    ←
+  </button>
+</DocumentFragment>
+`;
+
+exports[`IconButton should render without crashing 2`] = `
+<DocumentFragment>
+  <button
+    class="root root "
+    style="height: 48px; width: 48px; font-size: 48px;"
+  >
+    →
+  </button>
+</DocumentFragment>
+`;
