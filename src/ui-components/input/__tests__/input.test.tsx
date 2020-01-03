@@ -12,7 +12,7 @@ describe('Input', () => {
     expect(asFragment()).toMatchSnapshot();
   });
   it('should render without crashing with error prop', () => {
-    const {asFragment} = render( <Input type="number" error />);
+    const {asFragment} = render(<Input type="number" error />);
     expect(asFragment()).toMatchSnapshot();
   });
   it('should fire onChange event callback', () => {
