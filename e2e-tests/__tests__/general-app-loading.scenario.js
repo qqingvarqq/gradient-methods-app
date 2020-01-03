@@ -6,7 +6,7 @@ describe('app', () => {
   });
   it('should have title', async () => {
     const title = await page.title();
-    await expect(title).toEqual('Gradient Methods');
+    expect(title).toEqual('Gradient Methods');
   });
   it('should have favicon.ico', async () => {
     const iconUrl = await page.$eval("link[rel*='icon']", ({href}) => href);
