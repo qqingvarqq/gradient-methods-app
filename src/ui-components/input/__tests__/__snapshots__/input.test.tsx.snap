@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render without crashing 1`] = `
+<DocumentFragment>
+  <input
+    class="root    "
+    type="text"
+  />
+</DocumentFragment>
+`;
+
+exports[`Input should render without crashing with error prop 1`] = `
+<DocumentFragment>
+  <input
+    class="root error   "
+    type="number"
+  />
+</DocumentFragment>
+`;
+
+exports[`Input should render without crashing with type="number" 1`] = `
+<DocumentFragment>
+  <input
+    class="root    "
+    type="number"
+  />
+</DocumentFragment>
+`;

@@ -9,10 +9,11 @@ export interface InputProps
   error?: boolean;
 }
 export const Input: React.FC<InputProps> = props => {
-  const {className, error, ...rest} = props;
+  const {className = '', error = false, ...rest} = props;
+  const errorClassName = error ? styles.error : '';
   return (
     <input
-      className={`${styles.root} ${error && styles.error}  ${className} `}
+      className={`${styles.root} ${errorClassName}  ${className} `}
       {...rest}></input>
   );
 };
