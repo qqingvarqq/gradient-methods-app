@@ -9,10 +9,18 @@ The main difference between the regular gradient method and the difference-gradi
 
 ## Two-step difference-gradient method
 
-Here we calculate the next iteration based on two steps, which allows us to chose direction in which we moved more precisely.
+Here we calculate the next iteration based on two steps, which allows us to chose the direction in which we moved more precisely.
 
 ![alt text](./__readme-md-assets/two-step-gradient-method.png "Two-step difference-gradient method")
 
+## Extending the app
+In case if you want to fork the app, and possibly add new optimization methods or new test functions it is easy to do.
+* Adding new test functions:
+
+  Add `FunctionMetadata` object to `src/functions.index.ts`, so your function will inside `functionsToOptimize` hashmap, after that your function will automatically appear on the main page.
+* Adding new optimization methods:
+
+  Add `OptimizationAlgoMetadata` object to `src/optimization-algorithms/index.ts` so your method will be inside `optimizationMethods` hashmap, After that when you click 'Optimize' button on the optimization page you will see the result produced by your optimization algorithm.
 ------
 ### App Light/Dark modes.
 
