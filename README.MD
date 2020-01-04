@@ -1,4 +1,4 @@
-# [Gradient Methods App](https://qqingvarqq.github.io/gradient-methods-app/#/)
+# [Gradient Methods App](https://qqingvarqq.github.io/gradient-methods-app/#/) [![CircleCI](https://circleci.com/gh/qqingvarqq/gradient-methods-app/tree/master.svg?style=svg)](https://circleci.com/gh/qqingvarqq/gradient-methods-app/tree/master)
 The purpose of this app is the ability to compare the performance of the difference-gradient method and two-step modification of the difference-gradient method on different unconstrained optimization problems.
 
 ## Difference-gradient method
