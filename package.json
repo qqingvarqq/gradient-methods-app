@@ -17,8 +17,8 @@
     "typescript": "^3.7.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build -m 'update deployed app [ci skip]' ",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",

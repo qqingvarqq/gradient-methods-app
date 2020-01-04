@@ -1,0 +1,52 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/node:12.14-browsers
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - yarn-packages-{{ .Branch }}
+            - yarn-packages-master
+            - yarn-packages-
+      - run:
+          name: Install Dependencies
+          command: yarn install
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules/
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - run:
+          name: Run prettier
+          command: yarn prettier-check
+      - run:
+          name: Run tests
+          command: yarn test
+      - run:
+          name: Run e2e tests
+          command: yarn test:e2e
+      - add_ssh_keys:
+          fingerprints:
+            - "37:3c:51:13:4b:08:f8:39:7f:41:b8:17:28:9f:6d:1f"
+      - deploy:
+          name: Deploy to github pages
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+                echo -e "Starting to deploy to Github Pages\n"
+                git config user.email "ci-build@qqingvarqq.github.io"
+                git config user.name "ci-build"
+                yarn deploy
+            fi
