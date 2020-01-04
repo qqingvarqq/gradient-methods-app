@@ -4,11 +4,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gradient-methods-app/9728695faaea4422d25b.worker.js"
   },
   {
-    "revision": "4173ea904ea5261018d4513aae09bee3",
+    "revision": "15d8b18d9ba47fa006e4fe32eb33ad70",
     "url": "/gradient-methods-app/index.html"
   },
   {
-    "revision": "0cea168162b28e6e6e5d",
+    "revision": "6fa2b917e0196eeafb6a",
     "url": "/gradient-methods-app/static/css/main.69c7c7de.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gradient-methods-app/static/js/2.638d41f8.chunk.js.LICENSE"
   },
   {
-    "revision": "0cea168162b28e6e6e5d",
-    "url": "/gradient-methods-app/static/js/main.c6d4bf23.chunk.js"
+    "revision": "6fa2b917e0196eeafb6a",
+    "url": "/gradient-methods-app/static/js/main.0f7d2d90.chunk.js"
   },
   {
     "revision": "f3c8dc36449549633e06",
