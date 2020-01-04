@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "12e9c7d4cacf03864b02b3307f79df77",
-    "url": "/gradient-methods-app/ffe747d6b15986900054.worker.js"
+    "revision": "bce813024b0cbb0e4cb21c18445bf7e8",
+    "url": "/gradient-methods-app/9728695faaea4422d25b.worker.js"
   },
   {
-    "revision": "21c2abc27c31df212ba10857d6d00492",
+    "revision": "4173ea904ea5261018d4513aae09bee3",
     "url": "/gradient-methods-app/index.html"
   },
   {
-    "revision": "3448e49751a0fa57abbd",
-    "url": "/gradient-methods-app/static/css/main.0a428020.chunk.css"
+    "revision": "0cea168162b28e6e6e5d",
+    "url": "/gradient-methods-app/static/css/main.69c7c7de.chunk.css"
   },
   {
-    "revision": "5bbb2b6c889a8b4c0f83",
-    "url": "/gradient-methods-app/static/js/2.37e4e199.chunk.js"
+    "revision": "5298c0562236719ef4d2",
+    "url": "/gradient-methods-app/static/js/2.638d41f8.chunk.js"
   },
   {
     "revision": "d705cb622423d72c5defbf368ca70dcc",
-    "url": "/gradient-methods-app/static/js/2.37e4e199.chunk.js.LICENSE"
+    "url": "/gradient-methods-app/static/js/2.638d41f8.chunk.js.LICENSE"
   },
   {
-    "revision": "3448e49751a0fa57abbd",
-    "url": "/gradient-methods-app/static/js/main.8a76374a.chunk.js"
+    "revision": "0cea168162b28e6e6e5d",
+    "url": "/gradient-methods-app/static/js/main.c6d4bf23.chunk.js"
   },
   {
     "revision": "f3c8dc36449549633e06",
