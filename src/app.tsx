@@ -1,8 +1,11 @@
 import * as React from 'react';
+import GithubCorner from 'react-github-corner';
 import {useRouter, Pages} from './router.hook';
 import {MainPage, OptimizationPage} from './pages';
 import styles from './app.module.css';
 import {functionsToOptimize} from './functions';
+
+const REPO_URL = 'https://github.com/qqingvarqq/gradient-methods-app';
 
 export const App: React.FC = () => {
   const [route, setRoute] = useRouter();
@@ -36,6 +39,9 @@ export const App: React.FC = () => {
   };
   return (
     <div className={styles.root}>
+      <div className={styles.repoLinkContainer}>
+        <GithubCorner className={styles.githubLink} href={REPO_URL} />
+      </div>
       <div className={styles.container}>{getPage()}</div>
     </div>
   );
