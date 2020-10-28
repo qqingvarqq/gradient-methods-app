@@ -8,7 +8,7 @@ export interface InputProps
   > {
   error?: boolean;
 }
-export const Input: React.FC<InputProps> = props => {
+export const Input: React.FC<InputProps> = (props) => {
   const {className = '', error = false, ...rest} = props;
   const errorClassName = error ? styles.error : '';
   return (

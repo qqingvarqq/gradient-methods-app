@@ -6,7 +6,7 @@ import styles from './main-page.module.css';
 export const MainPage: React.FC<{
   functionsToOptimize: FunctionMetadata[];
   onClickFunctionOption: (index: string) => void;
-}> = props => {
+}> = (props) => {
   const {functionsToOptimize, onClickFunctionOption} = props;
   return (
     <div className={styles.root}>

@@ -2,7 +2,7 @@ import {optimizationMethods} from '../index';
 
 describe.each(Array.from(optimizationMethods.keys()))(
   'optimizationMethod %s',
-  name => {
+  (name) => {
     it('should optimize function', () => {
       //quadratic function, minimum at point 5
       const quadraticFunction = (x: number[]) => Math.pow(x[0], 2) + 5;

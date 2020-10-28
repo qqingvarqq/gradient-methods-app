@@ -5,7 +5,7 @@ import styles from './function-short-info.module.css';
 export const FunctionShortInfo: React.FC<{
   functionMetadata: FunctionMetadata;
   onClick: () => void;
-}> = props => {
+}> = (props) => {
   const {functionMetadata, ...rest} = props;
   return (
     <div title={functionMetadata.name} className={styles.root} {...rest}>

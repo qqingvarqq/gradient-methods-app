@@ -6,7 +6,7 @@ export interface BaseButtonProps
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {}
-export const BaseButton: React.FC<BaseButtonProps> = props => {
+export const BaseButton: React.FC<BaseButtonProps> = (props) => {
   const {className = '', ...rest} = props;
   return <button className={`${styles.root} ${className}`} {...rest}></button>;
 };

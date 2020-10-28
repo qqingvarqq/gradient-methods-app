@@ -6,7 +6,7 @@ import styles from './function-info.module.css';
 export const FunctionInfo: React.FC<{
   functionToOptimize: FunctionMetadata;
   setOptimizationParams: Function;
-}> = props => {
+}> = (props) => {
   const {functionToOptimize, setOptimizationParams} = props;
   const [epsilonInput, setEpsilonInput] = React.useState<string>('0.0000001');
   const [epsilonInputError, setEpsilonInputError] = React.useState<boolean>(
@@ -25,7 +25,7 @@ export const FunctionInfo: React.FC<{
     }
     const vectorX = vectorXInput.split(',').map(parseFloat);
     if (
-      vectorX.find(val => isNaN(val)) !== undefined ||
+      vectorX.find((val) => isNaN(val)) !== undefined ||
       !functionToOptimize.isValidParams(vectorX)
     ) {
       isValid = false;
@@ -65,7 +65,7 @@ export const FunctionInfo: React.FC<{
               onBlur={() => setVectorXInputError(false)}
               error={vectorXInputError}
               value={vectorXInput}
-              onChange={e => setVectorXInput(e.target.value)}
+              onChange={(e) => setVectorXInput(e.target.value)}
               placeholder="Enter initial vector X"></Input>
           </div>
           <div className={styles.epsilon}>
@@ -75,7 +75,7 @@ export const FunctionInfo: React.FC<{
               onBlur={() => setEpsilonInputError(false)}
               error={epsilonInputError}
               value={epsilonInput}
-              onChange={e => setEpsilonInput(e.target.value)}
+              onChange={(e) => setEpsilonInput(e.target.value)}
               placeholder="Enter epsilon"></Input>
           </div>
           <div className={styles.optimize}>

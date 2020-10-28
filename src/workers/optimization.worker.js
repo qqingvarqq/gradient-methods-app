@@ -2,7 +2,7 @@ import {optimizationMethods, runOptimization} from '../optimization-algorithms';
 import {functionsToOptimize} from '../functions';
 import {OptimizationPageWorkerMessageTypes} from './worker-messages';
 
-const onOptimizeFunction = params => {
+const onOptimizeFunction = (params) => {
   if (params === undefined || !Array.isArray(params) || params.length === 0) {
     return;
   }
@@ -24,7 +24,7 @@ const onOptimizeFunction = params => {
   ]);
 };
 // eslint-disable-next-line no-restricted-globals
-self.addEventListener('message', event => {
+self.addEventListener('message', (event) => {
   const data = event.data;
   onOptimizeFunction(data);
 });

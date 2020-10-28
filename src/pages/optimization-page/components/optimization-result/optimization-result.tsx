@@ -19,7 +19,7 @@ export const OptimizationResult: React.FC<{
   optimizationParams: OptimizationParams;
   optimizationAlgoMetadata: OptimizationAlgoMetadata;
   functionToOptimize: FunctionMetadata;
-}> = props => {
+}> = (props) => {
   const {
     optimizationAlgoMetadata,
     optimizationParams,

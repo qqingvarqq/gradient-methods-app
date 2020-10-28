@@ -19,7 +19,7 @@ import styles from './optimization-page.module.css';
 export const OptimizationPage: React.FC<{
   functionToOptimize: FunctionMetadata;
   onClickGoBackMainPage: () => void;
-}> = props => {
+}> = (props) => {
   const {functionToOptimize, onClickGoBackMainPage} = props;
   const [
     optimizationParams,
